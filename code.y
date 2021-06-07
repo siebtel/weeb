@@ -350,15 +350,15 @@ char *concat(char *a, char *b, char *c){
 	//buffer = '\0';
 	if(a != NULL){
 		strcpy(buffer, a);
-		free(a);
+		//free(a); problema com linux      
 	}
 	if(b != NULL){
 		strcat(buffer, b);
-		free(b);
+		//free(b); problema com linux
 	} 
 	if(c != NULL){
 		strcat(buffer, c);
-		free(c);
+		//free(c); problema com linux
 	} 
 
 	return(buffer);
