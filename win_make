@@ -1,0 +1,27 @@
+CC=gcc
+FLEX=flex
+YACC=yacc
+BISON=bison
+CFLAGS=-lfl.
+
+c_exec: output.c
+	$(CC) output.c -o c_executavel
+
+output.c: code
+	code input.weeb output.c
+
+code: y.tab.c lex.yy.c
+	$(CC) y.tab.c lex.yy.c -o code >>compile.txt 2>&1
+
+lex.yy.c: code.l
+	$(FLEX) code.l >>compile.txt 2>&1
+
+y.tab.c: code.tab.c
+	ren "code.tab.c" "y.tab.c"
+	ren "code.tab.h" "y.tab.h"
+
+code.tab.c: code.y
+	$(BISON) -d code.y >>compile.txt 2>&1
+
+clean:
+	del -f code.tab.h code.tab.c y.tab.c y.tab.h lex.yy.c output.c c_executavel.exe code.exe

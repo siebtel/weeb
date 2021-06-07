@@ -1,0 +1,17 @@
+inteiro x
+flutuante y
+flutuante z
+enquanto 1 [
+ler x
+ler y
+ler z
+se x > y[
+    se x > z[
+        escrever "x eh o maior"]
+    senao[
+        escrever "z eh o maior" ]]
+senao [
+    se y > z[
+        escrever "y eh o maior"]
+    senao [
+        escrever "z eh o maior"]]]

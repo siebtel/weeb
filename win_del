@@ -1,0 +1,2 @@
+clean:
+	del -f code.tab.h code.tab.c y.tab.c y.tab.h lex.yy.c output.c c_executavel.exe code.exe
