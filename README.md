@@ -51,6 +51,8 @@ A linguagem aceita inteiro e ponto flutuante:
 
 `flutuante y`
 
+É necessário declarar as variáveis antes de atribuir valor a elas.
+
 ### Operações básicas
 
 A linguagem weeb aceita as operações de:
